@@ -9,6 +9,7 @@ const DahboardLayout = ({children}:{children:React.ReactNode}) => {
       <section className="lg:pl-72 mb-6 mt-20  flex">
          {children}
       </section>
+      
     </main>
   )
 }

@@ -1,4 +1,5 @@
 
+import Footer from "@/components/shared/footer";
 import Hero from "@/components/shared/hero";
 import Login from "@/components/shared/login";
 import { ProductMarquee } from "@/components/shared/recomended-product";
@@ -25,14 +26,15 @@ export default function Home() {
           Shop now and enjoy the best deals!
         </p>
         <div className="lg:flex hidden flex-col w-full items-center mt-10">
-         <div className="w-96  border rounded-xl h-[500px] ">
-          <h1 className="text-center text-xl">Login</h1>
+         <div className="w-96  border-white/5 border shadow-sm rounded-xl h-[500px] ">
+          <h1 className="text-center text-xl"></h1>
           <Login/>
          </div>
         </div>
         </div>
       </div>
        <ProductMarquee/>
+       <Footer/>
     </div>
   );
 }

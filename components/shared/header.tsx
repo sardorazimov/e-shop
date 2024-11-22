@@ -4,14 +4,17 @@ import { useScrolled } from "@/hooks/scroll"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { Button } from "../ui/button"
-import { ShoppingCart } from "lucide-react"
+import { Menu, ShoppingCart } from "lucide-react"
 import { ModeToggle } from "@/provider/toggle"
+import Login from "./login"
+import { useRouter } from "next/navigation"
 
 const Header = () => {
     const scrolled = useScrolled()
+    const router = useRouter()
   return (
      <header className={cn('w-full z-50 top-0 left-0 h-14 fixed',
-        scrolled &&  'dark:bg-gray-950 dark:text-white  '
+        scrolled &&  'dark:bg-white/5 dark:text-white bg-white/5'
      )}>
          <div className="container mx-auto flex items-center justify-between py-4">
         <Link href="/" className="text-2xl font-bold">
@@ -25,11 +28,15 @@ const Header = () => {
             <li><Link href="#" className="hover:text-primary">Contact</Link></li>
           </ul>
         </nav>
-        <div className="space-x-2 flex gap-2 items-center h-full">
+        <div className="space-x-2 lg:flex gap-2  hidden items-center h-full">
           <ShoppingCart className="h-4 w-4" />
-          <ModeToggle/>
+          <ModeToggle />
         </div>
-        
+        <div className="sm:flex lg:hidden gap-1 flex h-full items-center">
+          <ModeToggle/> 
+           <Button onClick={() => router.push('/login')}
+            className="">Login</Button>
+        </div>
       </div>
      </header>
   )

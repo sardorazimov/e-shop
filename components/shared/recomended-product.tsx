@@ -10,12 +10,12 @@ const products = [
 
 export function ProductMarquee() {
   return (
-    <section className="bg-black py-10">
+    <section className="dark:bg-black py-10">
       <div className="container mx-auto">
         <h2 className="text-2xl font-bold mb-6">Related Products</h2>
         <div className="flex overflow-x-auto space-x-4">
           {products.map((product) => (
-            <div key={product.id} className="flex-shrink-0 w-48 bg-white/10 p-4 rounded-lg">
+            <div key={product.id} className="flex-shrink-0 w-48 dark:bg-white/10 border shadow-md dark:border-none cursor-pointer hover:bg-slate-200 p-4 rounded-lg">
               <Image
                 src={product.image}
                 alt={product.name}

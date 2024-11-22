@@ -7,7 +7,7 @@ const RootLayout = ({children}:{children:React.ReactNode}) => {
     <main>
         <Header/>
         {children}
-   
+    
     </main>
   )
 }
