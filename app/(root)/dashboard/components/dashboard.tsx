@@ -122,9 +122,11 @@ const Dashboard = () => {
               <CardFooter className="lg:flex justify-between items-center">
                 <span className="text-lg sm:hidden lg:flex  font-semibold">${product.price.toFixed(2)}</span>
                 <Button 
-                onClick={() => router.push('/dashboard/products')}
+                 onClick={() => router.push('/dashboard/products')}
                  className="lg:flex hidden">Add to Cart</Button>
-                <Button className="sm:flex lg:hidden"><Plus/> </Button>
+                <Button   
+                 onClick={() => router.push('/dashboard/products')}
+                className="sm:flex lg:hidden"><Plus/> </Button>
                 
               </CardFooter>
             </Card>
