@@ -14,7 +14,7 @@ const Header = () => {
     const router = useRouter()
   return (
      <header className={cn('w-full z-50 top-0 left-0 h-14 fixed',
-        scrolled &&  'dark:bg-white/5 dark:text-white bg-white/5'
+        scrolled &&  'bg-black  border-b border-white/5'
      )}>
          <div className="container mx-auto flex items-center justify-between py-4">
         <Link href="/" className="text-2xl font-bold">

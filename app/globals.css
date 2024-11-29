@@ -5,6 +5,18 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+@keyframes bg-gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.animate-bg-gradient {
+  animation: bg-gradient 6s infinite;
+  background-size: 200% 200%;
+}
 
 @layer base {
   :root {
